@@ -37,6 +37,10 @@
 - Form for adding the books
 - Booklist
 - Reducers
+- Redux
+- Adding books
+- Removing books
+
 
 ## Live Demo
 
@@ -73,7 +77,6 @@ Clone this repository to your desired folder:
 ## 🔭 Future Features
 
 - UI improvements
-- Redux
 - API
 
 ## 🤝 Contributing <a name="contributing"></a>
