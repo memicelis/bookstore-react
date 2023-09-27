@@ -8,7 +8,13 @@ const BookList = () => {
   return (
     <div>
       {books.map((book) => (
-        <Book key={book.item_id} id={book.item_id} title={book.title} author={book.author} category={book.category} />
+        <Book
+          key={book.item_id}
+          id={book.item_id}
+          title={book.title}
+          author={book.author}
+          category={book.category}
+        />
       ))}
       <CreateNewBook />
     </div>

@@ -10,10 +10,11 @@ const CreateNewBook = () => {
   const books = useSelector((state) => state.books);
 
   const handleAddBook = (e) => {
-    const item_id = `item${books.length + 1}`;
+    e.preventDefault();
+    const id = `item${books.length + 1}`;
     const fixedCategory = 'Fiction';
     const newBook = {
-      item_id, title, author, category: fixedCategory,
+      id, title, author, category: fixedCategory,
     };
 
     dispatch(addBook(newBook));
