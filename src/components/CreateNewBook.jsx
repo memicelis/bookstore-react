@@ -7,11 +7,12 @@ const CreateNewBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleAddBook = (e) => {
     e.preventDefault();
     if (title.trim() === '' || author.trim() === '') {
-      alert('Please fill in both title and author fields.');
+      setErrorMessage('Please fill in both title and author fields.');
       return;
     }
 
@@ -36,6 +37,7 @@ const CreateNewBook = () => {
         <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
         <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
         <button type="button" onClick={handleAddBook}>ADD BOOK</button>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>
     </div>
   );
