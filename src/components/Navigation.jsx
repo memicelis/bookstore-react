@@ -5,13 +5,13 @@ import styles from './Navigation.module.css';
 const Navigation = () => (
   <>
     <nav className={styles.navigation}>
-      <h1>Bookstore CMS</h1>
+      <h1 className={styles.navName}>Bookstore CMS</h1>
       <ul>
         <li>
-          <Link to="/">Books</Link>
+          <Link className={styles.books} to="/">BOOKS</Link>
         </li>
         <li>
-          <Link to="/categories">Categories</Link>
+          <Link className={styles.categories} to="/categories">CATEGORIES</Link>
         </li>
       </ul>
     </nav>

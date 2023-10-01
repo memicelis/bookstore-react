@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../redux/books/booksSlice';
+import styles from './createNewBook.module.css';
 
 const CreateNewBook = () => {
   const dispatch = useDispatch();
@@ -31,13 +32,13 @@ const CreateNewBook = () => {
   };
 
   return (
-    <div>
-      <h2>ADD NEW BOOK</h2>
-      <form>
-        <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
-        <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
-        <button type="button" onClick={handleAddBook}>ADD BOOK</button>
-        {errorMessage && <p className="error-message">{errorMessage}</p>}
+    <div className={styles.addBookContainer}>
+      <h2 className={styles.title}>ADD NEW BOOK</h2>
+      <form className={styles.inputContainer}>
+        <input className={styles.bookTitle} type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input className={styles.bookAuthor} type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <button className={styles.inputButton} type="button" onClick={handleAddBook}>ADD BOOK</button>
+        {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
       </form>
     </div>
   );

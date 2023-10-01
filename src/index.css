@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family:
@@ -24,4 +30,21 @@ code {
     Consolas,
     'Courier New',
     monospace;
+}
+
+:root {
+  --bubble-gum-pink: #ff5ab7;
+  --black: #1e1e1e;
+  --pinkish-grey: #c7c7c7;
+  --very-light-pink: #c4c4c4;
+  --white: #fafafa;
+  --white-two: #fff;
+  --medium-blue: #307bbe;
+  --azure: #0290ff;
+  --black-two: #121212;
+}
+
+.App {
+  padding: 4%;
+  background-color: #f5f6fa;
 }

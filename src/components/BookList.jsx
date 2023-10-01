@@ -20,7 +20,7 @@ const BookList = () => {
     };
   });
   return (
-    <div>
+    <div className="bookListContainer">
       {books.map((book) => (
         <Book
           key={book.item_id}
@@ -30,6 +30,7 @@ const BookList = () => {
           category={book.category}
         />
       ))}
+      <hr className="bookListDivider" />
       <CreateNewBook />
     </div>
   );
