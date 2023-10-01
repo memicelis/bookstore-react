@@ -40,6 +40,7 @@
 - Redux
 - Adding books
 - Removing books
+- Design
 
 
 ## Live Demo
@@ -76,8 +77,7 @@ Clone this repository to your desired folder:
 
 ## 🔭 Future Features
 
-- UI improvements
-- API
+- UI Improvements
 
 ## 🤝 Contributing <a name="contributing"></a>
 
