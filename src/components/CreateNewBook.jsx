@@ -1,14 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { addBook } from '../redux/books/booksSlice';
 
-const CreateNewBook = () => (
-  <div>
-    <h2>ADD NEW BOOK</h2>
-    <form>
-      <input type="text" placeholder="Book Title" />
-      <input type="text" placeholder="Author" />
-      <button type="submit">ADD BOOK</button>
-    </form>
-  </div>
-);
+const CreateNewBook = () => {
+  const dispatch = useDispatch();
+  const [title, setTitle] = useState('');
+  const [author, setAuthor] = useState('');
+
+  const books = useSelector((state) => state.books);
+
+  const handleAddBook = (e) => {
+    e.preventDefault();
+    const id = `item${books.length + 1}`;
+    const fixedCategory = 'Fiction';
+    const newBook = {
+      id, title, author, category: fixedCategory,
+    };
+
+    dispatch(addBook(newBook));
+
+    setTitle('');
+    setAuthor('');
+  };
+  return (
+    <div>
+      <h2>ADD NEW BOOK</h2>
+      <form>
+        <input type="text" placeholder="Book Title" value={title} onChange={(e) => setTitle(e.target.value)} />
+        <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)} />
+        <button type="button" onClick={handleAddBook}>ADD BOOK</button>
+      </form>
+    </div>
+  );
+};
 
 export default CreateNewBook;
