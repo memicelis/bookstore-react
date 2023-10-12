@@ -36,6 +36,7 @@
 - Components of the page
 - Form for adding the books
 - Booklist
+- Reducers
 
 ## Live Demo
 
@@ -73,7 +74,6 @@ Clone this repository to your desired folder:
 
 - UI improvements
 - Redux
-- Reduction
 - API
 
 ## 🤝 Contributing <a name="contributing"></a>
